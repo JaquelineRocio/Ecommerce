@@ -27,7 +27,19 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatIconModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    FormsModule, ReactiveFormsModule,
     SweetAlert2Module.forRoot(),
+    MatFormFieldModule
+  ],
+  exports:[
+    MatIconModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    FormsModule, ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
