@@ -47,7 +47,7 @@ ngOnChanges(){
 }
 
 addProduct(product: Products){
-  this.productService.saveProduct(product);
+  this.carritoCompras.push(product);
 }
    }
 
