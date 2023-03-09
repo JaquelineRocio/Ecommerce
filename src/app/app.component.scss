@@ -1,0 +1,26 @@
+.carritoCompras{
+  width: 20px;
+  height: 20px;
+}
+nav{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav.p svg{
+  color: white;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

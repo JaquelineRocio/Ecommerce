@@ -30,22 +30,17 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
-=======
-              "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
->>>>>>> 3a0854bb77af74fc65e46a3ed8d8fad59c565a59
             ],
             "scripts":  [
 
               "node_modules/jquery/dist/jquery.min.js",
-          
+
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
-          
+
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-          
+
               ]
           },
           "configurations": {

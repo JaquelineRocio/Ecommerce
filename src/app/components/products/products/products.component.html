@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-<div>
-  {{carritoCompras!.length}}
-</div>
-
-<div>
-    <div  *ngFor="let product of products" >
-        <img src={{product.image}}>
-        <p>{{product.title}}</p>
-        <p>${{product.price}}</p>
-        <button (click)="addProduct(product)" *ngIf="isToken">Add</button>
-=======
 <div class="container-products">
     <div class="product" *ngFor="let product of products"  >
-        <img src={{product.image}}>
+        <img src='https://www.shutterstock.com/image-vector/default-image-icon-vector-missing-260nw-2086941550.jpg'>
         <div class="info-button-product">
             <div class="info-product">
                 <p>{{product.title}}</p>
                 <p>${{product.price}}</p>
             </div>
-                      
+            <button (click)="addProduct(product)" *ngIf="isToken">Add</button>
         </div>
-        
->>>>>>> 3a0854bb77af74fc65e46a3ed8d8fad59c565a59
+
     </div>
 </div>
