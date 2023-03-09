@@ -10,18 +10,25 @@ import { Products } from './products';
 export class ProductsComponent {
 
   public products: Products[]= [];
-
+  carritoCompras: Products[]=[];
+  isToken = false;
   constructor( public productService:ProductsService) {
-    
+    if(localStorage.getItem('token'))
+    {
+      this.isToken=true;
+    }
+    else{
+      this.isToken = false;
+    }
+
+
    }
 
    ngOnInit(){
-    
-   
       this.productService.getProducts().subscribe((res)=>{
         for (let index = 0; index <= 10; index++) {
           console.log(res.products[index]);
-          this.products = [...this.products, 
+          this.products = [...this.products,
             {
               id: res.products[index].id,
               title: res.products[index].title,
@@ -29,14 +36,18 @@ export class ProductsComponent {
               price: res.products[index].price,
               image:res.products[index].images
             }
-        ] 
+        ]
         }
-        
-       
-        
-             
-
       })
+
+}
+
+ngOnChanges(){
+  this.carritoCompras = this.productService.getCarritoCompras();
+}
+
+addProduct(product: Products){
+  this.productService.saveProduct(product);
 }
    }
 

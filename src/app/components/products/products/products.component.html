@@ -1,9 +1,13 @@
 <div>
+  {{carritoCompras!.length}}
+</div>
+
+<div>
     <div  *ngFor="let product of products" >
         <img src={{product.image}}>
         <p>{{product.title}}</p>
-        <p>${{product.price}}</p>      
-        
+        <p>${{product.price}}</p>
+        <button (click)="addProduct(product)" *ngIf="isToken">Add</button>
     </div>
 </div>
 
