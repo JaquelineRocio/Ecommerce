@@ -17,7 +17,6 @@ import { ProductsComponent } from './components/products/products/products.compo
     LoginComponent,
     RegisterComponent,
     ProductsComponent
-
   ],
   imports: [
     BrowserModule,
