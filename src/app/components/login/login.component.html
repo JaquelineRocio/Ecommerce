@@ -1,1 +1,61 @@
-<p>login works!</p>
+<div class="login-container">
+  <div class="login-form">
+
+    <form class="login"  [formGroup]="formLogin">
+      <h2 class="login__header">Inicia <strong> sesión </strong></h2>
+      <div class="login__body">
+        <!-- USERNAME -->
+        <mat-form-field class="login__input" appearance="fill" >
+          <mat-label> <mat-icon>user</mat-icon> Username </mat-label>
+          <input
+            matInput
+            type="text"
+            formControlName="username"
+          />
+          <mat-error>El campo es requerido</mat-error>
+        </mat-form-field>
+        <!-- PASSWORD -->
+        <mat-form-field class="login__input" appearance="fill">
+          <mat-label> <mat-icon>no_encryption</mat-icon> Contraseña </mat-label>
+          <input
+            matInput
+            formControlName="password"
+            [type]="hidePassword ? 'password' : 'text'"
+          />
+          <mat-error>La contraseña es requerida</mat-error>
+          <button
+            type="button"
+            mat-icon-button
+            matSuffix
+            class="button-password"
+            (click)="hidePassword = !hidePassword"
+          >
+            <mat-icon>{{
+              hidePassword ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </button>
+
+        </mat-form-field>
+      </div>
+      <div class="login__footer" >
+
+
+        <button
+          [disabled]="formLogin.invalid"
+          class="btn btn-primary"
+          type="submit"
+          (click)="login(formLogin.value)"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Ingreso
+        </button>
+        <p *ngIf="mensajeError!=''">Usuario no encontrado</p>
+        <a class="is-centered__register" routerLink="signup">Registrarse</a>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
