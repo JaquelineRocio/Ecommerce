@@ -1,6 +1,7 @@
 <div class="container-products">
-    <div class="product" *ngFor="let product of products"  >
-        <img src='https://www.shutterstock.com/image-vector/default-image-icon-vector-missing-260nw-2086941550.jpg'>
+    <div class="product" *ngFor="let product of products" (click)="detalleProduct()"
+    [swal]="[product.title, product.price.toString()]" >
+        <img src={{product.image}}>
         <div class="info-button-product">
             <div class="info-product">
                 <p>{{product.title}}</p>

@@ -49,6 +49,12 @@ ngOnChanges(){
 addProduct(product: Products){
   this.carritoCompras.push(product);
 }
+
+detalleProduct(){
+  console.log('ver detalle producto');
+  
+  
+}
    }
 
 

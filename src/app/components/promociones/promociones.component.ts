@@ -39,13 +39,12 @@ export class PromocionesComponent {
         }
        
        }
-       
-      
-       
-            
+        
 
      })
-}
+  }
+
+
   }
 
 
