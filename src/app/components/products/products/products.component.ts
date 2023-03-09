@@ -16,24 +16,28 @@ export class ProductsComponent {
    }
 
    ngOnInit(){
-   
+    
    
       this.productService.getProducts().subscribe((res)=>{
-        console.log(res.products);
+        for (let index = 0; index <= 10; index++) {
+          console.log(res.products[index]);
+          this.products = [...this.products, 
+            {
+              id: res.products[index].id,
+              title: res.products[index].title,
+              description: res.products[index].description,
+              price: res.products[index].price,
+              image:res.products[index].images
+            }
+        ] 
+        }
         
-        this.products = [...this.products, 
-          {
-            id: res.id,
-            title: res.title,
-            description: res.description,
-            price: res.price,
-            image:res.image
-          }
-      ]       
-console.log(this.products);
+       
+        
+             
 
       })
-
+}
    }
 
-}
+
