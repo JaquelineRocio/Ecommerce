@@ -38,6 +38,12 @@ export class ProductsComponent {
 
       })
 }
+
+detalleProduct(){
+  console.log('ver detalle producto');
+  
+  
+}
    }
 
 
